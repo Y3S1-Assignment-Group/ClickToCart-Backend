@@ -31,7 +31,7 @@ public class CartController {
         return cartService.getAllItemsInCart(custId);
     }
 
-    @GetMapping("/{custId}/{id}")
+    @GetMapping("/{custId}/{itemId}")
     @PreAuthorize("hasRole('USER')")
     public List<CartRecords> getItemInCartById(@PathVariable int custId, @PathVariable int itemId) {
         return cartService.getItemInCartById(custId, itemId);
